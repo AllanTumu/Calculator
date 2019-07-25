@@ -94,7 +94,9 @@ class MainActivity : AppCompatActivity() {
             btPercent.id -> {
                 op = "%"
             }
-
+            btDot.id -> {
+                op = "."
+            }
         }
         oldnumber = ShowNumber.text.toString()
         newop  = true
@@ -122,6 +124,9 @@ class MainActivity : AppCompatActivity() {
                 answer = oldnumber.toDouble() / 100
             }
             "" -> {
+                answer = 0.0
+            }
+            "." -> {
                 answer = 0.0
             }
         }
