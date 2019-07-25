@@ -7,6 +7,7 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    var equalevent = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,11 +18,12 @@ class MainActivity : AppCompatActivity() {
 
     fun btNumberEvent(view:View){
         if (newop){
-            ShowNumber.setText("0")
+            ShowNumber.setText("")
             btDot.isClickable=true
+            btPlusOrMinus.isClickable=true
         }
         newop = false
-
+        equalevent = false
         val btSelect = view as Button
         var btClickValue:String=ShowNumber.text.toString()
         when (btSelect.id) {
@@ -59,12 +61,16 @@ class MainActivity : AppCompatActivity() {
                 btClickValue+="."
                 btDot.isClickable=false
             }
+            btPlusOrMinus.id -> {
+                btClickValue="-"+btClickValue
+                btPlusOrMinus.isClickable=false
+            }
 
         }
         ShowNumber.setText(btClickValue)
     }
 
-    var op = "*"
+    var op = ""
     var oldnumber = ""
     var newop = true
     fun btOpEvent (view:View) {
@@ -85,6 +91,9 @@ class MainActivity : AppCompatActivity() {
             btPlus.id -> {
                 op = "+"
             }
+            btPercent.id -> {
+                op = "%"
+            }
 
         }
         oldnumber = ShowNumber.text.toString()
@@ -92,6 +101,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun btEqualEvent (view: View){
+        if (equalevent) return
+        val btSelect = view as Button
         val newNumber = ShowNumber.text.toString()
         var answer:Double?=null
         when(op){
@@ -107,9 +118,17 @@ class MainActivity : AppCompatActivity() {
             "+" ->{
                 answer = oldnumber.toDouble() + newNumber.toDouble()
             }
+            "%" ->{
+                answer = oldnumber.toDouble() / 100
+            }
+            "" -> {
+                answer = 0.0
+            }
         }
+
         ShowNumber.setText(answer.toString())
         newop = true
+        equalevent = true
     }
     fun btClear (view: View){
         val btSelect = view as Button
@@ -117,11 +136,12 @@ class MainActivity : AppCompatActivity() {
             btClear.id-> {
                 ShowNumber.setText("0")
                 btDot.isClickable=true
+                btPlusOrMinus.isClickable=true
                 newop = true
+                oldnumber = ""
+                op=""
             }
         }
-
-
     }
 
 }
