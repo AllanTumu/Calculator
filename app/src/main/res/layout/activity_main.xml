@@ -17,11 +17,11 @@
             android:gravity="right"
             android:ems="10"
             android:textStyle="bold"
-            android:maxLength="20"
+            android:maxLength="15"
             android:inputType="none"
             android:focusable="false"
             android:textColor="@color/white"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:id="@+id/ShowNumber"
             android:baselineAligned="true"/>
     <TableLayout

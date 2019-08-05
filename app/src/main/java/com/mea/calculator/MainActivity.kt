@@ -4,17 +4,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    var op = ""
+    var oldnumber:String = ""
+    var newNumber:String = ""
+    var newop = true
     var equalevent = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
-
 
     fun btNumberEvent(view:View){
         if (newop){
@@ -62,17 +65,14 @@ class MainActivity : AppCompatActivity() {
                 btDot.isClickable=false
             }
             btPlusOrMinus.id -> {
-                btClickValue="-"+btClickValue
+                btClickValue="-" +btClickValue
                 btPlusOrMinus.isClickable=false
             }
-
         }
         ShowNumber.setText(btClickValue)
     }
 
-    var op = ""
-    var oldnumber = ""
-    var newop = true
+
     fun btOpEvent (view:View) {
         var btSelect = view as Button
         when (btSelect.id){
@@ -97,22 +97,32 @@ class MainActivity : AppCompatActivity() {
             btDot.id -> {
                 op = "."
             }
+
         }
         oldnumber = ShowNumber.text.toString()
+            if (oldnumber.equals("")){
+                oldnumber = "0"
+            } else {
+                oldnumber.toDouble()
+            }
         newop  = true
     }
 
     fun btEqualEvent (view: View){
+         newNumber = ShowNumber.text.toString()
+        if (newNumber.equals("")){
+            newNumber = "0"
+        } else {
+            newNumber.toDouble()
+        }
         if (equalevent) return
-        val btSelect = view as Button
-        val newNumber = ShowNumber.text.toString()
         var answer:Double?=null
         when(op){
             "/" -> {
-                answer = oldnumber.toDouble()/newNumber.toDouble()
+                answer = oldnumber.toDouble()/ newNumber.toDouble()
             }
             "*" -> {
-                answer = oldnumber.toDouble()*newNumber.toDouble()
+                answer = oldnumber.toDouble()* newNumber.toDouble()
             }
             "-" -> {
                 answer = oldnumber.toDouble() - newNumber.toDouble()
@@ -130,7 +140,11 @@ class MainActivity : AppCompatActivity() {
                 answer = 0.0
             }
         }
-
+        if (answer.toString().equals("NaN")){
+            answer = 0.0
+        }else {
+            answer = answer.toString().toDouble()
+        }
         ShowNumber.setText(answer.toString())
         newop = true
         equalevent = true
@@ -143,11 +157,12 @@ class MainActivity : AppCompatActivity() {
                 btDot.isClickable=true
                 btPlusOrMinus.isClickable=true
                 newop = true
-                oldnumber = ""
+                oldnumber = "0"
                 op=""
             }
         }
     }
 
 }
+
 
