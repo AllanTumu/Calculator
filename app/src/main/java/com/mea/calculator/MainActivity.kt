@@ -102,7 +102,12 @@ class MainActivity : AppCompatActivity() {
         oldnumber = ShowNumber.text.toString()
             if (oldnumber.equals("")){
                 oldnumber = "0"
-            } else {
+            } else if (oldnumber.equals("-")){
+                oldnumber = "0"
+            } else if (oldnumber.equals(".")){
+                oldnumber = "0"
+            }
+            else {
                 oldnumber.toDouble()
             }
         newop  = true
@@ -112,7 +117,12 @@ class MainActivity : AppCompatActivity() {
          newNumber = ShowNumber.text.toString()
         if (newNumber.equals("")){
             newNumber = "0"
-        } else {
+        } else if (newNumber.equals("-")){
+            newNumber = "0"
+        } else if (newNumber.equals(".")){
+            newNumber = "0"
+        }
+        else {
             newNumber.toDouble()
         }
         if (equalevent) return
