@@ -2,10 +2,12 @@ package com.mea.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
     var op = ""
@@ -169,6 +171,21 @@ class MainActivity : AppCompatActivity() {
                 newop = true
                 oldnumber = "0"
                 op=""
+            }
+        }
+    }
+    fun btBckSpace (view: View){
+        var dis = ShowNumber.text.toString()
+        val btSelect = view as Button
+        when (btSelect.id){
+            btBckSpace.id -> {
+                if (dis.length >1){
+                   dis = dis.substring(0,dis.length -1)
+                    ShowNumber.setText(dis)
+                }
+                else if (dis.length <= 1){
+                    ShowNumber.setText("")
+                }
             }
         }
     }

@@ -220,14 +220,26 @@
                 android:textColor="@color/white"
                 android:background="@color/red"
                 android:text="C"
-                android:layout_width="55pt"
+                android:layout_width="30pt"
                 android:layout_height="30pt"
                 android:layout_marginRight="1pt"
                 android:id="@+id/btClear"
                 android:textSize="20sp"
                 android:layout_gravity="center"
-                android:layout_weight="0"
+                android:layout_weight="1"
                 android:onClick="btClear"/>
+        <Button
+                android:textColor="@color/white"
+                android:background="@color/mildRed"
+                android:text="AC"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_marginRight="1pt"
+                android:id="@+id/btBckSpace"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btBckSpace"/>
         <Button
                 android:background="@color/orange"
                 android:text="%"
