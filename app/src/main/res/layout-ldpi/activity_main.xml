@@ -16,6 +16,7 @@
             android:layout_weight="1"
             android:gravity="right"
             android:ems="10"
+            android:longClickable="false"
             android:textStyle="bold"
             android:maxLength="15"
             android:inputType="none"
@@ -34,8 +35,8 @@
                 android:layout_height="wrap_content">
             <Button
                     android:text="7"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:layout_marginRight="1pt"
                     android:textSize="20sp"
                     android:layout_weight="1"
@@ -44,8 +45,8 @@
                     android:onClick="btNumberEvent"/>
             <Button
                     android:text="8"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:layout_marginRight="1pt"
                     android:background="@color/white"
                     android:layout_weight="1"
@@ -54,8 +55,8 @@
                     android:onClick="btNumberEvent"/>
             <Button
                     android:text="9"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:layout_marginRight="1pt"
                     android:background="@color/white"
                     android:layout_weight="1"
@@ -68,8 +69,8 @@
                     android:textSize="20sp"
                     android:layout_marginBottom="1pt"
                     android:textColor="@color/white"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:layout_weight="1"
                     android:onClick="btOpEvent"
                     android:id="@+id/btdiv"/>
@@ -82,8 +83,8 @@
                     android:layout_weight="1"
                     android:layout_marginRight="1pt"
                     android:background="@color/white"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:id="@+id/bt4"
                     android:onClick="btNumberEvent"/>
             <Button
@@ -92,18 +93,18 @@
                     android:textSize="20sp"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:id="@+id/bt5"
                     android:onClick="btNumberEvent"/>
             <Button
                     android:text="6"
                     android:layout_weight="1"
-                    android:layout_width="20pt"
+                    android:layout_width="30pt"
                     android:textSize="20sp"
                     android:layout_marginRight="1pt"
                     android:background="@color/white"
-                    android:layout_height="20pt"
+                    android:layout_height="30pt"
                     android:id="@+id/bt6"
                     android:onClick="btNumberEvent"/>
             <Button
@@ -112,9 +113,9 @@
                     android:layout_weight="1"
                     android:layout_marginBottom="1pt"
                     android:textColor="@color/white"
-                    android:layout_width="20pt"
+                    android:layout_width="30pt"
                     android:textSize="20sp"
-                    android:layout_height="20pt"
+                    android:layout_height="30pt"
                     android:id="@+id/btMul"
                     android:onClick="btOpEvent"/>
         </TableRow>
@@ -125,19 +126,19 @@
                     android:textSize="20sp"
                     android:layout_weight="1"
                     android:layout_marginRight="1pt"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:background="@color/white"
                     android:id="@+id/bt1"
                     android:onClick="btNumberEvent"/>
             <Button
                     android:text="2"
                     android:layout_weight="1"
-                    android:layout_width="20pt"
+                    android:layout_width="30pt"
                     android:textSize="20sp"
                     android:layout_marginRight="1pt"
                     android:background="@color/white"
-                    android:layout_height="20pt"
+                    android:layout_height="30pt"
                     android:id="@+id/bt2"
                     android:onClick="btNumberEvent"/>
             <Button
@@ -146,8 +147,8 @@
                     android:layout_weight="1"
                     android:layout_marginRight="1pt"
                     android:background="@color/white"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:id="@+id/bt3"
                     android:onClick="btNumberEvent"/>
             <Button
@@ -157,8 +158,8 @@
                     android:layout_weight="1"
                     android:layout_marginBottom="1pt"
                     android:textColor="@color/white"
-                    android:layout_width="20pt"
-                    android:layout_height="20pt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
                     android:id="@+id/btMinus"
                     android:onClick="btOpEvent"/>
         </TableRow>
@@ -171,8 +172,8 @@
         <Button
                 android:text="0"
                 android:textSize="20sp"
-                android:layout_width="20pt"
-                android:layout_height="20pt"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
                 android:id="@+id/bt0"
                 android:layout_marginRight="1pt"
                 android:background="@color/white"
@@ -181,8 +182,8 @@
         <Button
                 android:text="."
                 android:textSize="20sp"
-                android:layout_width="20pt"
-                android:layout_height="20pt"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
                 android:layout_marginRight="1pt"
                 android:background="@color/white"
                 android:id="@+id/btDot"
@@ -191,8 +192,8 @@
         <Button
                 android:background="@color/orange"
                 android:textColor="@color/white"
-                android:layout_width="20pt"
-                android:layout_height="20pt"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
                 android:id="@+id/btPlusOrMinus"
                 android:textSize="20sp"
                 android:layout_weight="1"
@@ -203,8 +204,8 @@
                 android:background="@color/orange"
                 android:text="+"
                 android:textColor="@color/white"
-                android:layout_width="20pt"
-                android:layout_height="20pt"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
                 android:layout_marginBottom="1pt"
                 android:id="@+id/btPlus"
                 android:textSize="20sp"
@@ -220,8 +221,8 @@
                 android:textColor="@color/white"
                 android:background="@color/red"
                 android:text="C"
-                android:layout_width="20pt"
-                android:layout_height="20pt"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
                 android:layout_marginRight="1pt"
                 android:id="@+id/btClear"
                 android:textSize="20sp"
@@ -232,8 +233,8 @@
                 android:textColor="@color/white"
                 android:background="@color/mildRed"
                 android:text="AC"
-                android:layout_width="20pt"
-                android:layout_height="20pt"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
                 android:layout_marginRight="1pt"
                 android:id="@+id/btBckSpace"
                 android:textSize="20sp"
@@ -244,8 +245,8 @@
                 android:background="@color/orange"
                 android:text="%"
                 android:textColor="@color/white"
-                android:layout_width="20pt"
-                android:layout_height="20pt"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
                 android:layout_marginBottom="1pt"
                 android:layout_marginRight="1pt"
                 android:id="@+id/btPercent"
@@ -255,8 +256,8 @@
         />
         <Button
                 android:background="@color/green"
-                android:layout_width="20pt"
-                android:layout_height="20pt"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
                 android:id="@+id/btEquals"
                 android:textSize="20sp"
                 android:layout_weight="1"

@@ -28,7 +28,7 @@
     <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+    >
 
         <TableRow
                 android:layout_width="match_parent"
@@ -168,7 +168,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+    >
         <Button
                 android:text="0"
                 android:textSize="20sp"
@@ -216,7 +216,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+    >
         <Button
                 android:textColor="@color/white"
                 android:background="@color/red"
@@ -253,7 +253,7 @@
                 android:textSize="20sp"
                 android:layout_weight="1"
                 android:onClick="btOpEvent"
-                />
+        />
         <Button
                 android:background="@color/green"
                 android:layout_width="30pt"
@@ -267,4 +267,4 @@
         />
 
     </LinearLayout>
-    </LinearLayout>
+</LinearLayout>

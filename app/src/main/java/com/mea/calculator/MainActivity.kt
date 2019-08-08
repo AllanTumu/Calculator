@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     var newop = true
     var equalevent = false
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             ShowNumber.setText("")
             btDot.isClickable=true
             btPlusOrMinus.isClickable=true
+            btBckSpace.isClickable=true
         }
         newop = false
         equalevent = false
@@ -160,6 +162,7 @@ class MainActivity : AppCompatActivity() {
         ShowNumber.setText(answer.toString())
         newop = true
         equalevent = true
+
     }
     fun btClear (view: View){
         val btSelect = view as Button
