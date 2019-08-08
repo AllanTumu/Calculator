@@ -18,7 +18,7 @@
             android:ems="10"
             android:longClickable="false"
             android:textStyle="bold"
-            android:maxLength="15"
+            android:maxLength="10"
             android:inputType="none"
             android:focusable="false"
             android:textColor="@color/white"

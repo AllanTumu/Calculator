@@ -156,7 +156,13 @@ class MainActivity : AppCompatActivity() {
         }
         if (answer.toString().equals("NaN")){
             answer = 0.0
-        }else {
+        }else if (answer.toString().equals("Infinity")) {
+            answer = 0.0
+        }
+        else if (answer.toString().equals("-Infinity")) {
+            answer = 0.0
+        }
+        else {
             answer = answer.toString().toDouble()
         }
         ShowNumber.setText(answer.toString())
