@@ -18,13 +18,69 @@
             android:ems="10"
             android:textStyle="bold"
             android:longClickable="false"
-            android:maxLength="10"
+            android:maxLength="15"
             android:inputType="none"
             android:focusable="false"
             android:textColor="@color/white"
             android:textSize="40sp"
             android:id="@+id/ShowNumber"
             android:baselineAligned="true"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+        <Button
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:text="C"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_marginRight="1pt"
+                android:id="@+id/btClear"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btClear"/>
+        <Button
+                android:textColor="@color/white"
+                android:background="@color/mildRed"
+                android:text="AC"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_marginRight="1pt"
+                android:id="@+id/btBckSpace"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="btBckSpace"/>
+        <Button
+                android:background="@color/orange"
+                android:text="%"
+                android:textColor="@color/white"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_marginBottom="1pt"
+                android:layout_marginRight="1pt"
+                android:id="@+id/btPercent"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:onClick="btOpEvent"
+        />
+        <Button
+        android:background="@color/orange"
+        android:text="+"
+        android:textColor="@color/white"
+        android:layout_width="30pt"
+        android:layout_height="30pt"
+        android:layout_marginBottom="1pt"
+        android:id="@+id/btPlus"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:onClick="btOpEvent"/>
+
+
+    </LinearLayout>
     <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -201,60 +257,6 @@
                 android:text="+/-"
                 android:onClick="btNumberEvent"/>
         <Button
-                android:background="@color/orange"
-                android:text="+"
-                android:textColor="@color/white"
-                android:layout_width="30pt"
-                android:layout_height="30pt"
-                android:layout_marginBottom="1pt"
-                android:id="@+id/btPlus"
-                android:textSize="20sp"
-                android:layout_weight="1"
-                android:onClick="btOpEvent"/>
-    </TableRow>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-    >
-        <Button
-                android:textColor="@color/white"
-                android:background="@color/red"
-                android:text="C"
-                android:layout_width="30pt"
-                android:layout_height="30pt"
-                android:layout_marginRight="1pt"
-                android:id="@+id/btClear"
-                android:textSize="20sp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:onClick="btClear"/>
-        <Button
-                android:textColor="@color/white"
-                android:background="@color/mildRed"
-                android:text="AC"
-                android:layout_width="30pt"
-                android:layout_height="30pt"
-                android:layout_marginRight="1pt"
-                android:id="@+id/btBckSpace"
-                android:textSize="20sp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:onClick="btBckSpace"/>
-        <Button
-                android:background="@color/orange"
-                android:text="%"
-                android:textColor="@color/white"
-                android:layout_width="30pt"
-                android:layout_height="30pt"
-                android:layout_marginBottom="1pt"
-                android:layout_marginRight="1pt"
-                android:id="@+id/btPercent"
-                android:textSize="20sp"
-                android:layout_weight="1"
-                android:onClick="btOpEvent"
-        />
-        <Button
                 android:background="@color/green"
                 android:layout_width="30pt"
                 android:layout_height="30pt"
@@ -264,7 +266,6 @@
                 android:layout_marginRight="1pt"
                 android:text="="
                 android:onClick="btEqualEvent"
-        />
-
-    </LinearLayout>
+        />>
+    </TableRow>
 </LinearLayout>
